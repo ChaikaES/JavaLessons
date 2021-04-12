@@ -8,6 +8,7 @@ public class HomeWork2 {
         positiveNegative(15);
         checkNumber(-5);
         wordsNumber("Hello!", 7);
+        isLeapYear(1997);
     }
 
     public static boolean twoNumbers(int a, int b) {
@@ -43,4 +44,17 @@ public class HomeWork2 {
             System.out.println(f);
         }
     }
+
+    public static boolean isLeapYear(int y) {
+        if (y % 400 == 0) {
+            return true;
+        } else if (y % 100 == 0) {
+            return false;
+        } else if (y % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
