@@ -64,14 +64,10 @@ public class HomeWork3 {
         for (int i = 0; i < arr.length; i++) {
             int rowLength = arr[i].length;
             for (int j = 0; j < rowLength; j++) {
-                if (i == j) {
-                    arr[i][j] = 1;
-                }
-                if (j == rowLength - 1 - i) {
+                if ((i == j) || (j == rowLength - 1 - i)) {
                     arr[i][j] = 1;
                 }
             }
-
             printArray(arr[i]);
         }
 
