@@ -35,7 +35,6 @@ public class HomeWork3 {
         int[] search = {9, 4, 15, 7, 23, 1, 2, 2, 16, 8};
         printArray(search);
         maxMin(search);
-
     }
 
     public static void printArray(int[] pr) {
@@ -63,7 +62,7 @@ public class HomeWork3 {
 
     public static void increaseNumber(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i]<6) {
+            if (arr[i] < 6) {
                 arr[i] *= 2;
             }
         }
@@ -103,8 +102,6 @@ public class HomeWork3 {
         System.out.println("Минимальное значение: " + min);
         System.out.println("Максимальное значение: " + max);
     }
-
-
 }
 
 
