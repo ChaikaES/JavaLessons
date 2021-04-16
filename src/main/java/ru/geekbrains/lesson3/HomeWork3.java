@@ -27,6 +27,10 @@ public class HomeWork3 {
         int[][] fdiag = new int[5][5];
         fillDiagonal(fdiag);
 
+        System.out.println("Task_5");
+        int[] result = twoArg(10, 7);
+        printArray(result);
+
     }
 
     public static void printArray(int[] pr) {
@@ -70,7 +74,14 @@ public class HomeWork3 {
             }
             printArray(arr[i]);
         }
+    }
 
+    public static int[] twoArg(int len, int initialValue) {
+        int[] mass = new int[len];
+        for (int i = 0; i < len; i++) {
+            mass[i] = initialValue;
+        }
+        return mass;
     }
 
 
