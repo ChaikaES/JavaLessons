@@ -22,6 +22,11 @@ public class HomeWork3 {
         printArray(inc_arr);
         increaseNumber(inc_arr);
         printArray(inc_arr);
+
+        System.out.println("Task_4");
+        int[][] fdiag = new int[5][5];
+        fillDiagonal(fdiag);
+
     }
 
     public static void printArray(int[] pr) {
@@ -52,6 +57,22 @@ public class HomeWork3 {
             if (arr[i]<6) {
                 arr[i] *= 2;
             }
+        }
+    }
+
+    public static void fillDiagonal(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int rowLength = arr[i].length;
+            for (int j = 0; j < rowLength; j++) {
+                if (i == j) {
+                    arr[i][j] = 1;
+                }
+                if (j == rowLength - 1 - i) {
+                    arr[i][j] = 1;
+                }
+            }
+
+            printArray(arr[i]);
         }
 
     }
