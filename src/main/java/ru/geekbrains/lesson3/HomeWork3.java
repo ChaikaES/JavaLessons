@@ -31,6 +31,11 @@ public class HomeWork3 {
         int[] result = twoArg(10, 7);
         printArray(result);
 
+        System.out.println("Task_6");
+        int[] search = {9, 4, 15, 7, 23, 1, 2, 2, 16, 8};
+        printArray(search);
+        maxMin(search);
+
     }
 
     public static void printArray(int[] pr) {
@@ -82,6 +87,21 @@ public class HomeWork3 {
             mass[i] = initialValue;
         }
         return mass;
+    }
+
+    public static void maxMin(int[] arr) {
+        int min = arr[0];
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println("Минимальное значение: " + min);
+        System.out.println("Максимальное значение: " + max);
     }
 
 
