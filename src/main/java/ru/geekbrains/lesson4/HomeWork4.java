@@ -43,15 +43,50 @@ public class HomeWork4 {
     }
 
     //проверка победы
+//    public static boolean checkWin(char symb) {
+//        if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
+//        if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
+//        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
+//        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
+//        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
+//        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
+//        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
+//        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
+//        return false;
+//    }
+
     public static boolean checkWin(char symb) {
-        if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
-        if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
-        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
-        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
-        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
-        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
-        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
-        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
+        // пробегаем по строкам
+        for (int row = 0; row < SIZE; row++) {
+            boolean full = true;
+            for (int col = 0; col < SIZE; col++) {
+                full &= map[row][col] == symb;
+            }
+            if (full == true) return true;
+        }
+        // пробегаем по колонкам
+        for (int col = 0; col < SIZE; col++) {
+            boolean full = true;
+            for (int row = 0; row < SIZE; row++) {
+                full &= map[row][col] == symb;
+            }
+            if (full == true) return true;
+        }
+        // диагонали
+        boolean diag1 = true;
+        boolean diag2 = true;
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
+                if (row == col) {
+                    diag1 &= map[row][col] == symb;
+                }
+                if (col == SIZE - 1 - row) {
+                    diag2 &= map[row][col] == symb;
+                }
+            }
+        }
+        if (diag1 == true || diag2 == true) return true;
+
         return false;
     }
 
