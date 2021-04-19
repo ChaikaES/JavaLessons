@@ -56,27 +56,16 @@ public class HomeWork4 {
 //    }
 
     public static boolean checkWin(char symb) {
-        // пробегаем по строкам
-        for (int row = 0; row < SIZE; row++) {
-            boolean full = true;
-            for (int col = 0; col < SIZE; col++) {
-                full &= map[row][col] == symb;
-            }
-            if (full == true) return true;
-        }
-        // пробегаем по колонкам
-        for (int col = 0; col < SIZE; col++) {
-            boolean full = true;
-            for (int row = 0; row < SIZE; row++) {
-                full &= map[row][col] == symb;
-            }
-            if (full == true) return true;
-        }
-        // диагонали
         boolean diag1 = true;
         boolean diag2 = true;
+
         for (int row = 0; row < SIZE; row++) {
+            boolean fullRow = true;
+            boolean fullCol = true;
+
             for (int col = 0; col < SIZE; col++) {
+                fullRow &= map[row][col] == symb;
+                fullCol &= map[col][row] == symb;
                 if (row == col) {
                     diag1 &= map[row][col] == symb;
                 }
@@ -84,6 +73,7 @@ public class HomeWork4 {
                     diag2 &= map[row][col] == symb;
                 }
             }
+            if (fullRow == true || fullCol == true) return true;
         }
         if (diag1 == true || diag2 == true) return true;
 
