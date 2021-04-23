@@ -17,9 +17,18 @@ public class Employee {
         this.age = age;
     }
 
-    public void printInfo() {
-        System.out.println(fullName);
+    public int getAge() {
+        return age;
     }
 
-
+    public void printInfo() {
+        System.out.println(
+                "Full name: " + fullName + "\n" +
+                "Position: " + position + "\n" +
+                "E-mail: " + email + "\n" +
+                "Phone number: " + phoneNumber + "\n" +
+                "Salary: " + salary + "\n" +
+                "Age: " + age + "\n"
+        );
+    }
 }
