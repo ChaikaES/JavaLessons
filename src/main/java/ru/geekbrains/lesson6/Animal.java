@@ -1,7 +1,7 @@
 package ru.geekbrains.lesson6;
 
 public class Animal {
-    private String name;
+    protected String name;
 
     public Animal(String name) {
         this.name = name;
