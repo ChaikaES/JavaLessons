@@ -12,6 +12,7 @@ public class Dog extends Animal{
             super.run(d);
         }
     }
+
     public void swim (int d) {
         if (d > 10) {
             System.out.println(name + " не может так много проплыть");
@@ -19,6 +20,4 @@ public class Dog extends Animal{
             super.swim(d);
         }
     }
-
-
 }

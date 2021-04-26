@@ -2,9 +2,11 @@ package ru.geekbrains.lesson6;
 
 public class Animal {
     protected String name;
+    private static int count;
 
     public Animal(String name) {
         this.name = name;
+        count++;
     }
 
     public void run(int d) {
@@ -15,6 +17,8 @@ public class Animal {
         System.out.println(name + " swim " + d + " m ");
     }
 
-
+    public static void printCount() {
+        System.out.println("Количество животных: " + count);
+    }
 }
 

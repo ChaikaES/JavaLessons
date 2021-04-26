@@ -13,5 +13,7 @@ public class App {
         voldemar.swim(1);
         zhuchka.swim(7);
         zhuchka.swim(11);
+
+        Animal.printCount();
     }
 }
