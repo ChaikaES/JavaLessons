@@ -4,6 +4,7 @@ public class App {
     public static void main(String[] args) {
         task_3();
         task_5();
+        task_6();
     }
 
     public static void task_3() {
@@ -26,5 +27,13 @@ public class App {
         for (Cat cat: cats) {
             cat.eat(plate);
         }
+    }
+
+    public static void task_6() {
+        Plate plate = new Plate(10);
+
+        plate.addFood(5);
+
+        assert plate.getFood() == 15;
     }
 }

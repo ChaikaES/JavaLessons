@@ -17,5 +17,13 @@ public class Plate {
         }
     }
 
+    public void addFood(int fd) {
+        food += fd;
+    }
+
     public void info() {System.out.println("Food amount: " + food);}
+
+    public int getFood() {
+        return food;
+    }
 }
