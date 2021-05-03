@@ -21,6 +21,14 @@ public class CounterApp extends JFrame { //класс Окна
         add(counterValueView, BorderLayout.CENTER);
         value = initialValue;
         counterValueView.setText(String.valueOf(value));
+
+        counterValueView.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int input = Integer.parseInt(counterValueView.getText());
+                value = input;
+            }
+        });
         //тут создаются кнопки
         JButton decrementButton = new JButton("<");
         decrementButton.setFont(font);
